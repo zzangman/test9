@@ -8,10 +8,10 @@ public class StudentService {
 	// 메서드명 : addStudent
 	// 학생의 인원수를 입력하세요
 	// 학생수 만큼 이름,번호 입력
-	
+	Scanner sc=new Scanner(System.in);
 	
 	public Student[] addStudent(){
-		Scanner sc=new Scanner(System.in);
+		
 		
 		System.out.println("학생수를 입력하세요");
 		int count=sc.nextInt();
@@ -33,6 +33,36 @@ public class StudentService {
 		
 		
 	}// addStudent
+	
+	
+	// 메서드명 : addPoint
+	// 각 학생의 점수 입력
+	
+	public Student[] addPoint(Student []student){
+	
+		
+		
+		for(int i=0;i<student.length;i++){
+			
+		
+		System.out.println("국어 점수 :");
+		student[i].kor=sc.nextInt();
+		System.out.println("영어 점수 :");
+		student[i].eng=sc.nextInt();
+		System.out.println("수학 점수 :");
+		student[i].math=sc.nextInt();
+		
+		student[i].total=student[i].kor+student[i].eng+student[i].math;
+		student[i].avg=student[i].total/3;
+		
+		System.out.println("----------------------");
+		
+		}//for
+		
+		return student;
+		
+		
+	}// add Point
 	
 	
 }

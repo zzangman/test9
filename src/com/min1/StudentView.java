@@ -14,7 +14,23 @@ public class StudentView {
 			System.out.println("ÃÑÁ¡ :"+student[i].total);
 			System.out.println("Æò±Õ :"+student[i].avg);
 			System.out.println("------------------------------");
-		}
+		} // for
+	} // view
+	
+	
+	public void scoreView(Student []student){
+		
+		for(int i=0;i<student.length;i++){
+			
+			System.out.println("±¹¾î :"+student[i].kor);
+			System.out.println("¿µ¾î :"+student[i].eng);
+			System.out.println("¼öÇÐ :"+student[i].math);
+			System.out.println("ÃÑÁ¡ :"+student[i].total);
+			System.out.println("Æò±Õ :"+student[i].avg);
+			System.out.println("------------------------------");
+		} // for
+		
 		
 	}
+	
 }

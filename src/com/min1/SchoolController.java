@@ -9,6 +9,7 @@ public class SchoolController {
 		
 		StudentService stuService=new StudentService();
 		Student [] st=null;
+		
 		StudentView sv=new StudentView();
 		
 		boolean flag = true;
@@ -28,9 +29,11 @@ public class SchoolController {
 				break;
 			case 2:
 				System.out.println("성적 입력입니다.");
+				stuService.addPoint(st);
 				break;
 			case 3:
 				System.out.println("성적 조회입니다.");
+				sv.scoreView(st);
 				break;
 			case 4:
 				System.out.println("전체 조회입니다.");
